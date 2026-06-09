@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Game - Gioco di Tennis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu">
+            <h1>🎾 TENNIS GAME</h1>
+            <p>Scegli la modalità di gioco:</p>
+            <button class="btn btn-primary" onclick="startSinglePlayer()">Single Player</button>
+            <button class="btn btn-secondary" onclick="startMultiplayer()">Multiplayer</button>
+        </div>
+
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="game-info">
+                <div class="player-info">
+                    <h2 id="player1Name">Giocatore 1</h2>
+                    <p id="player1Score">0</p>
+                </div>
+                <div class="score-display">
+                    <span id="gameScore1">0</span> - <span id="gameScore2">0</span>
+                </div>
+                <div class="player-info">
+                    <h2 id="player2Name">Giocatore 2</h2>
+                    <p id="player2Score">0</p>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+            <div class="game-controls">
+                <p id="controls"></p>
+                <button class="btn btn-danger" onclick="backToMenu()">Menu Principale</button>
+                <button class="btn btn-warning" onclick="resetGame()">Ricomincia</button>
+            </div>
+
+            <div class="game-status" id="gameStatus"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
